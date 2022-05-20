@@ -12,9 +12,9 @@
 
 2.在根目录执行go mod tidy 安装后端依赖
 
-3.在kpaas-frontend目录执行yarn install 命令安装前端依赖
+3.在PaaS-frontend目录执行yarn install 命令安装前端依赖
 
-4.修改kpaas-frontend前端中的连接后端的地址（全局搜索192.168.145.132全局替换成localhost即可）
+4.修改PaaS-frontend前端中的连接后端的地址（全局搜索192.168.145.132全局替换成localhost即可）
 
 5.同步namespace，即PaaS平台真正与你的k8s集群进行连接，将自己的kubernets的当前用户/.kube/config文件的内容覆盖到config.yaml文件。之后执行同步namespace的命令GO111MODULE=on go run cmd/client/client.go sync namespace -c ./app.cfg -k ./config.yaml即可。参考下方视频教程本地连接k8s
 
@@ -24,7 +24,7 @@
 
 8.打开navicate等可视化数据库连接工具，执行在根目录/sql文件目录下的kplcloud.sql文件
 
-9.在kpaas-frontend前端项目根目录执行yarn start ，之后选择run指令即可启动前端（需提前克隆前端到本地）
+9.在PaaS-frontend前端项目根目录执行yarn start ，之后选择run指令即可启动前端（需提前克隆前端到本地）
 
 10.访问localhost:8000，登录平台即可使用
 
